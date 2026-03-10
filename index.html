@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEV IOS TEAM</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(#021b1b,#033);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+max-width:400px;
+margin:auto;
+padding:20px;
+}
+
+.title{
+color:#ffc83d;
+font-size:20px;
+font-weight:bold;
+}
+
+.info{
+margin:5px;
+}
+
+.time{
+color:#39e7ff;
+margin-bottom:20px;
+}
+
+input{
+width:90%;
+padding:13px;
+border-radius:14px;
+border:none;
+text-align:center;
+font-size:16px;
+margin-top:10px;
+}
+
+.btn{
+width:90%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:15px;
+font-size:18px;
+color:white;
+cursor:pointer;
+background:linear-gradient(90deg,#00ffa6,#00cfff);
+}
+
+.name{
+color:#ffd54f;
+margin:12px 0;
+font-size:18px;
+}
+
+.hide{
+display:none;
+}
+
+.log{
+background:black;
+color:#00ff9c;
+text-align:left;
+padding:10px;
+margin-top:20px;
+font-size:14px;
+height:120px;
+overflow:auto;
+border-radius:10px;
+}
+
+/* popup */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+UNBAN - CHECK MAIL - REFUND<br>
+ACCOUNT FREE FIRE - SPAMLOGIN
+</div>
+
+<div class="info">TOOL CHECK MAIL XT 🍎🍏</div>
+<div class="info">Telegram:@yyefhhd</div>
+
+<div class="time" id="time">Thời gian sử dụng: 24:11:45</div>
+
+<!-- KEY -->
+
+<div id="keyScreen">
+
+<input id="key" placeholder="Nhập KEY">
+
+<button class="btn" onclick="checkKey()">KÍCH HOẠT KEY</button>
+
+</div>
+
+<!-- TOOL -->
+
+<div id="toolScreen" class="hide">
+
+<input id="idgame" placeholder="Nhập ID">
+
+<button class="btn" onclick="startCheck()">CHECK MAIL XT</button>
+
+<div class="name">TIK TOk TOOL CHECK MAIL XT 🍎🍏: Nguyễn Hoàng</div>
+
+<button class="btn" onclick="fake()">CHECK LIÊN KẾT</button>
+<button class="btn" onclick="fake()">SPAM LOGIN</button>
+<button class="btn" onclick="fake()">CHANGE MAIL</button>
+<button class="btn" onclick="fake()">BAND 15 DAY</button>
+
+<div class="log" id="log">
+[+] System Ready...
+</div>
+
+</div>
+
+</div>
+
+<div class="popup" id="loading">
+Đang xử lý...
+</div>
+
+<script>
+
+function checkKey(){
+
+let key=document.getElementById("key").value;
+
+if(key==="FFTOOL-7H3K-92LA"){
+
+document.getElementById("keyScreen").style.display="none";
+document.getElementById("toolScreen").style.display="block";
+
+}else{
+
+alert("Key sai");
+
+}
+
+}
+
+/* log giả */
+
+function startCheck(){
+
+let log=document.getElementById("log");
+
+log.innerHTML+="<br>[+] Checking mail verify...";
+setTimeout(()=>{log.innerHTML+="<br>[+] Mail: congminhdss123a@gmail.com";},1000);
+setTimeout(()=>{log.innerHTML+="<br>[+] Status: VERIFIED";},2000);
+setTimeout(()=>{log.innerHTML+="<br>[+] Pass Account: 577191";},3000);
+
+}
+
+/* popup giả */
+
+function fake(){
+
+let p=document.getElementById("loading");
+
+p.style.display="flex";
+
+setTimeout(function(){
+
+p.style.display="none";
+
+},2000);
+
+}
+
+/* thời gian */
+
+let seconds=87105;
+
+setInterval(function(){
+
+seconds--;
+
+let h=Math.floor(seconds/3600);
+let m=Math.floor((seconds%3600)/60);
+let s=seconds%60;
+
+document.getElementById("time").innerText=
+"Thời gian sử dụng: "+h+":"+m+":"+s;
+
+},1000);
+
+</script>
+
+</body>
+</html>
